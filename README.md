@@ -71,6 +71,7 @@ Ik wil graag veel experimenteren bij deze opdracht, vooral visueel ook. Ik wil h
 Wat ga ik morgen doen?
 
 Morgen heb ik voor beide vakken een gesprekje. Daarna ga ik thuis nog experimenteren met shape() en vormen maken. 
+_Uiteindelijk heb ik op donderdagavond al geëxperimenteerd met vormen maken en gepusht op main._
 
 
 
