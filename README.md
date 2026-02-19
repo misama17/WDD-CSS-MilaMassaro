@@ -67,6 +67,10 @@ Wat ga ik morgen doen?
 Morgen heb ik voor beide vakken een gesprekje. Daarna ga ik thuis nog experimenteren met shape() en vormen maken. 
 
 
-**WEEKREFLECTIE: WEEK 3**
 
+**REFLECTIE: WEEK 3**
+
+Deze week ging op zich best redelijk. Althans, ik was heel erg veel aan het experimenteren op woensdag met animaties. Maar uiteindelijk moet ik ook iets laten zien bij de presentatie, waardoor ik dus thuis iets af moet om te presenteren. Hierdoor heb ik op woensdag eigenlijk niet echt rust gehad, wat best wel zwaar was. Maar voelde wel minder druk dan de weken ervoor. Ik vond het ergens wel lastig dat de mensen met wie ik in een groepje zat al vrij snel echt wel iets goeds hadden staan, terwijl ik nog aan het experimenteren was. Hierdoor kreeg ik het gevoel dat ik heel erg achterliep en ik vielde me ook verplicht om iets goeds neer te zetten, om ze niet teleur te stellen... 
+De presentatie ging goed. Ik voel me over het algemeen comfortabel met presenteren en ik merkte dat ik mijn code goed uit kon leggen, wat ook fijn was om te merken. Doordat ik best wat had geëxperimenteerd kon ik denk ik ook beter uitleggen waarom wat ik uiteindelijk had wel werkte.
+Ik vind conceptualiseren altijd heel erg leuk, dus vond bedenken wat ik ging maken leuk om te doen. Welke interactie? welke visuele stijl? wat wil ik voor thema's? Toen ik wilde starten met coderen kwam ik erachter dat mijn idee wel wat ingewikkeld was, dus ik ben benieuwd hoe dit gaat. Anders wil ik het met gradients doen i.p.v. strokes als back-up plan. Verder ben ik wel enthousiast om te gaan experimenteren met kleuren. Ik voel wel wat druk weer voor de deadline, maar dit zal de hele minor wel blijven denk ik.
 
