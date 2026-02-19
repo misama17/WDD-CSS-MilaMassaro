@@ -1,0 +1,59 @@
+*, *::after, *::before {
+    box-sizing:border-box; 
+    margin: 0;
+}
+
+:root {
+  --color-cmd-yellow: #FFF021;
+  --color-cmd-papaya: #FAF0D7;
+  --color-cmd-lavender: #F0EBF0;
+  --color-cmd-mint: #E0F5DF;
+}
+
+main {
+  height: 100vh;
+  
+  background: black;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+main > div {
+  position: relative;
+  width: 20em;
+  height: 20em;
+}
+
+div > div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    border: .5px solid;
+
+    --sbindex: sibling-index();
+
+    /*  https://9elements.github.io/fancy-border-radius/#30.36.30.43--.  */
+    /*  https://codepen.io/shooft/pen/dyOXrpZ  */
+    /*   border-radius: 36% 64% 57% 43% / 30% 30% 70% 70%; */
+    /*  !! GEMINI voor berekening van border-radius. Vraag: hoe ik met behulp van sibling-index() elk kind net een andere vorm kan geven. Toen heb ik zelf de waardes veranderd en ook een calc voor de andere toegevoegd (niet alleen eerste).*/
+    border-radius: 
+    calc(75% + (var(--sbindex) * 0.5%)) 36% 57% 43% / calc(25% + (var(--sbindex) * 3%)) 30% 70% 70%;
+
+    /*  Nu met transform de rotatie van elke vorm aanpassen en met scale de grootte aanpassen  */
+    transform:
+    rotate(calc(var(--sbindex) * 2deg))
+    scale(calc(1 + var(--sbindex) * 0.01));
+
+    /* !!GEMINI om berekening te maken voor kleurverloop */
+    --mix-ratio: calc(var(--sbindex) * 1.5%);
+
+    border-color: color-mix(
+    in srgb, 
+    var(--color-cmd-lavender), 
+    var(--color-cmd-yellow) var(--mix-ratio)
+    );
+}
