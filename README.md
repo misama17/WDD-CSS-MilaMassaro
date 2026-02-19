@@ -71,6 +71,7 @@ Ik wil graag veel experimenteren bij deze opdracht, vooral visueel ook. Ik wil h
 Wat ga ik morgen doen?
 
 Morgen heb ik voor beide vakken een gesprekje. Daarna ga ik thuis nog experimenteren met shape() en vormen maken. 
+_Uiteindelijk heb ik op donderdagavond al geëxperimenteerd met vormen maken en gepusht op main._
 
 
 
@@ -84,3 +85,7 @@ Ik vind conceptualiseren altijd heel erg leuk, dus vond bedenken wat ik ging mak
 
 ## BRONNENLIJST
 https://codepen.io/Sidstumple/pen/LEZdEWP?editors=1100 
+
+https://9elements.github.io/fancy-border-radius/#30.36.30.43--.
+
+https://codepen.io/shooft/pen/dyOXrpZ
