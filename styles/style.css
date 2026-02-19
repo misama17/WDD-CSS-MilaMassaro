@@ -32,7 +32,10 @@ div > div {
     height: 100%;
     width: 100%;
 
-    border: .5px solid;
+    border: 1px solid;
+    opacity: .5;
+    mix-blend-mode: lighten;
+
 
     --sbindex: sibling-index();
 
@@ -49,7 +52,7 @@ div > div {
     scale(calc(1 + var(--sbindex) * 0.01));
 
     /* !!GEMINI om berekening te maken voor kleurverloop */
-    --mix-ratio: calc(var(--sbindex) * 1.5%);
+    --mix-ratio: calc(var(--sbindex) * 1.25%);
 
     border-color: color-mix(
     in srgb, 
