@@ -85,3 +85,7 @@ Ik vind conceptualiseren altijd heel erg leuk, dus vond bedenken wat ik ging mak
 
 ## BRONNENLIJST
 https://codepen.io/Sidstumple/pen/LEZdEWP?editors=1100 
+
+https://9elements.github.io/fancy-border-radius/#30.36.30.43--.
+
+https://codepen.io/shooft/pen/dyOXrpZ
