@@ -74,3 +74,7 @@ Deze week ging op zich best redelijk. Althans, ik was heel erg veel aan het expe
 De presentatie ging goed. Ik voel me over het algemeen comfortabel met presenteren en ik merkte dat ik mijn code goed uit kon leggen, wat ook fijn was om te merken. Doordat ik best wat had geëxperimenteerd kon ik denk ik ook beter uitleggen waarom wat ik uiteindelijk had wel werkte.
 Ik vind conceptualiseren altijd heel erg leuk, dus vond bedenken wat ik ging maken leuk om te doen. Welke interactie? welke visuele stijl? wat wil ik voor thema's? Toen ik wilde starten met coderen kwam ik erachter dat mijn idee wel wat ingewikkeld was, dus ik ben benieuwd hoe dit gaat. Anders wil ik het met gradients doen i.p.v. strokes als back-up plan. Verder ben ik wel enthousiast om te gaan experimenteren met kleuren. Ik voel wel wat druk weer voor de deadline, maar dit zal de hele minor wel blijven denk ik.
 
+
+
+**BRONNENLIJST**
+https://codepen.io/Sidstumple/pen/LEZdEWP?editors=1100 
