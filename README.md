@@ -33,3 +33,40 @@ Wat ga ik morgen doen?
 
 Morgen heb ik presentatie van ons onderdeel en presentaties van andere groepjes.
 Daarna hebben we de kick-off voor de eindopdracht. Ik denk dat ik daarna schetsen ga maken en ga beginnen met een eerste versie.
+
+
+
+**donderdag 19 feb**
+
+Wat heb ik vandaag gedaan?
+
+2 uur presentaties vanaf 10 uur. Mijn presentatie ging over scrolldriven animations.
+Daarna even een uurtje pauze, waarin ik wat dingetjes voor werk heb geregeld.
+Toen een introductie/uitleg voor de eindopdracht.
+Kiezen welke opdracht ik kies en schetsen hiervoor maken, een plan van wat ik wil gaan doen.
+Aan het einde van de dag een hoorcollege over de geschiedenis van browsers (zie aantekeningen in Notion)
+
+
+Hoeveel tijd heeft dit me gekost?
+
+6 uur totaal.
+120 min presentaties.
+30 min introductie.
+120 min schetsen, conceptualiseren.
+60 min hoorcollege.
+
+
+Wat heb ik geleerd?
+
+Nou gister heb ik eigenlijk de conclusie getrokken dat het misschien beter zou werken als ik niet visueel inspiratie op zou doen, maar inspiratie van andere websites of codepen. Maar toch ging ik opzoeken wat generative art precies was en toen raakte ik zo geïnspireerd dat ik toch vanuit Pinterest een plan heb gemaakt... Toen ik de kern van mijn idee had uitgewerkt en aan Sanne vroeg hoe ik alleen een stroke van mijn shape kon tonen, zei hij dat het erg moeilijk was. Dus ik heb geleerd dat ik ook naar mijn lessen moet luisteren denk ik? Ik zou het kunnen doen met SVG, maar zou het liever zonder willen doen.
+Ik wil graag veel experimenteren bij deze opdracht, vooral visueel ook. Ik wil het als een soort riso print maken, dus kleuren die kunnen veranderen op basis van of ze overlappen. Dus ik wil kijken wat hierbij werkt en welke interessante visuele dingen ik te zien krijg. Dus ik heb een minder strak plan dan eerder opdrachten, omdat ik heb geleerd het dat het soms beter is om daarin de vrijheid te nemen, om te experimenteren met code.
+
+
+Wat ga ik morgen doen?
+
+Morgen heb ik voor beide vakken een gesprekje. Daarna ga ik thuis nog experimenteren met shape() en vormen maken. 
+
+
+**WEEKREFLECTIE: WEEK 3**
+
+
