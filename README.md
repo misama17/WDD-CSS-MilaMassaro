@@ -2,6 +2,12 @@
 
 Link naar mijn Notion: https://www.notion.so/Minor-Webdesign-Development-2fd4a28d1c2c8004a247e9f0794a6be0?source=copy_link 
 
+**Welke opdracht heb je gekozen voor de eindopdracht?:**
+CMD Artification
+
+**Welke technieken wil je gebruiken?:**
+CSS nesting, style queries, @function, if(). 
+
 
 **WEEK 3**
 
@@ -65,11 +71,6 @@ Ik wil graag veel experimenteren bij deze opdracht, vooral visueel ook. Ik wil h
 Wat ga ik morgen doen?
 
 Morgen heb ik voor beide vakken een gesprekje. Daarna ga ik thuis nog experimenteren met shape() en vormen maken. 
-
-**Welke opdracht heb je gekozen voor de eindopdracht?:**
-CMD Artification
-**Welke technieken wil je gebruiken?:**
-CSS nesting, style queries, @function, if(). 
 
 
 
