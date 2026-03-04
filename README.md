@@ -82,6 +82,35 @@ De presentatie ging goed. Ik voel me over het algemeen comfortabel met presenter
 Ik vind conceptualiseren altijd heel erg leuk, dus vond bedenken wat ik ging maken leuk om te doen. Welke interactie? welke visuele stijl? wat wil ik voor thema's? Toen ik wilde starten met coderen kwam ik erachter dat mijn idee wel wat ingewikkeld was, dus ik ben benieuwd hoe dit gaat. Anders wil ik het met gradients doen i.p.v. strokes als back-up plan. Verder ben ik wel enthousiast om te gaan experimenteren met kleuren. Ik voel wel wat druk weer voor de deadline, maar dit zal de hele minor wel blijven denk ik.
 
 
+**woensdag 4 maartb**
+
+Wat heb ik vandaag gedaan?
+
+Ik heb vandaag vooral veel workshops gevolgd en daarmee inspiratie opgedaan.
+Voor de rest heb ik veel geëxperimenteerd met 3D en hoe ik mijn shapes nog meer 3D kan laten lijken en het net lijkt alsof je er omheen draait.
+
+
+Hoeveel tijd heeft dit me gekost?
+
+6 uur.
+60 min weekly nerd.
+165 - 200 min workshops.
+120 min werken aan eindopdracht.
+
+
+Wat heb ik geleerd?
+
+Meer over 3D en hoe ik dit kan verwerken in mijn eigen projectje.
+Dat je randomness moet faken, maar echt random alleen op Safari browser kan.
+
+
+Wat ga ik morgen doen?
+
+Verder aan eindopdracht: kijken naar de slider met javascript en hoe ik dat erin kan verwerken.
+Kijken naar randomness.
+
+
+
 
 ## BRONNENLIJST
 https://codepen.io/Sidstumple/pen/LEZdEWP?editors=1100 
