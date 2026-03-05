@@ -140,6 +140,8 @@ Wat ga ik morgen doen?
 
 presentaties van BT en CSS.
 
+_Ik had mijn check-out met Joost vandaag. Hij was al aan de slag gegaan met de JavaScript die we mochten gebruiken. Ik had ernaar gekeken maar begreep de code nog niet helemaal, maar hij heeft een beetje uitgelegd hoe hij het had gedaan, wat fijn was._
+
 
 ## REFLECTIE: WEEK 4
 
