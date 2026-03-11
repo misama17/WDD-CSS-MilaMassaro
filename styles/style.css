@@ -78,7 +78,7 @@ main > div {
   --color-cmd-mint: #E0F5DF;
 }
 
-@media (prefers-color-scheme:light) {
+@media (prefers-color-scheme:dark) {
   :root {
     --color-background: #000;
     --color-one: hsl(
@@ -99,7 +99,7 @@ main > div {
   }
 }
 
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme:light) {
   :root {
 /*     --color-corrector: 0.9; */
     --color-background: #fff;
