@@ -2,6 +2,8 @@
 
 Link naar mijn Notion: https://www.notion.so/Minor-Webdesign-Development-2fd4a28d1c2c8004a247e9f0794a6be0?source=copy_link 
 
+In mijn Notion staan alle links naar alle experimenten die ik heb gedaan!!
+
 **Welke opdracht heb je gekozen voor de eindopdracht?:**
 CMD Artification
 
@@ -82,6 +84,71 @@ De presentatie ging goed. Ik voel me over het algemeen comfortabel met presenter
 Ik vind conceptualiseren altijd heel erg leuk, dus vond bedenken wat ik ging maken leuk om te doen. Welke interactie? welke visuele stijl? wat wil ik voor thema's? Toen ik wilde starten met coderen kwam ik erachter dat mijn idee wel wat ingewikkeld was, dus ik ben benieuwd hoe dit gaat. Anders wil ik het met gradients doen i.p.v. strokes als back-up plan. Verder ben ik wel enthousiast om te gaan experimenteren met kleuren. Ik voel wel wat druk weer voor de deadline, maar dit zal de hele minor wel blijven denk ik.
 
 
+**woensdag 4 maart**
+
+Wat heb ik vandaag gedaan?
+
+Ik heb vandaag vooral veel workshops gevolgd en daarmee inspiratie opgedaan.
+Voor de rest heb ik veel geëxperimenteerd met 3D en hoe ik mijn shapes nog meer 3D kan laten lijken en het net lijkt alsof je er omheen draait.
+
+
+Hoeveel tijd heeft dit me gekost?
+
+6 uur.
+60 min weekly nerd.
+165 - 200 min workshops.
+120 min werken aan eindopdracht.
+
+
+Wat heb ik geleerd?
+
+Meer over 3D en hoe ik dit kan verwerken in mijn eigen projectje.
+Dat je randomness moet faken, maar echt random alleen op Safari browser kan.
+
+
+Wat ga ik morgen doen?
+
+Verder aan eindopdracht: kijken naar de slider met javascript en hoe ik dat erin kan verwerken.
+Kijken naar randomness.
+
+
+
+**donderdag 5 maart**
+
+Wat heb ik vandaag gedaan?
+
+Veel geëxperimenteerd met mogelijke animaties en gekeken watvoor effecten ik mooi en interessant vind.
+Gekeken naar JavaScript dat ik zou mogen gebruiken.
+Begonnen aan mijn blog (de basis). Ik wil echt een glas-achtig effect wat heel realistisch lijkt, dus was uittesten hoe ik dat het beste kan doen. 
+
+
+Hoeveel tijd heeft dit me gekost?
+
+4 uur.
+60 min intro van de dag.
+60 min workshop anchor positioning
+120 min werken aan eindopdracht.
+45 min blog.
+
+
+Wat heb ik geleerd?
+
+Anchor positioning. 
+Animeren per sibling. vooral geëxperimenteerd wat coole effecten gaf eigenlijk...
+
+Wat ga ik morgen doen?
+
+presentaties van BT en CSS.
+
+_Ik had mijn check-out met Joost vandaag. Hij was al aan de slag gegaan met de JavaScript die we mochten gebruiken. Ik had ernaar gekeken maar begreep de code nog niet helemaal, maar hij heeft een beetje uitgelegd hoe hij het had gedaan, wat fijn was._
+
+
+## REFLECTIE: WEEK 4
+
+Deze week heb ik vooral geëxperimenteerd met mogelijke animaties en wat een cool effect gaf. Sanne gaf me het advies dat ik voor mijn eindopdracht ook al mijn experimenten kan laten zien en dat dan mensen eentje kunnen aanklikken die dan getoond wordt. Dat lijkt me wel wat, omdat je met mijn concept heel veel verschillende dingen kan maken die cool zijn. Maar tegelijkertijd lijkt het me ook heel leuk om eentje echt heel goed uit te werken, dus ik ben nog aan het twijfelen wat ik kan doen.
+Ik liep deze week een beetje vast met wat ik kon doen. Hierdoor heb ik het gevoel dat ik niet vooruit ben gekomen deze week. Dit had ik ook bij het andere vak eigenlijk, terwijl er natuurlijk genoeg te doen is. Maar ik probeer dingen dag voor dag te bekijken en niet te stressen.
+De laatste zondag van de vakantie keek ik echt enorm op tegen de minor. Het gaf me zo veel druk, waardoor ik het eigenlijk niet meer wilde doen als ik eerlijk ben... Ik ben altijd iemand die heel hard werkt voor alles en altijd een extra stapje doet. Ik ben niet bang om hard te werken zeg maar. Alleen met deze minor tot nu toe kijk ik er tegenop. Misschien dat ik zo ook achter een van mijn leerdoelen kom, namelijk of dit een vakgebied is dat bij me past. Ik heb het gevoel dat ik niet helemaal mijn creatieve ei kwijt kan nu, ookal zijn de odprachten vrij. Maar ik vind het moeilijk om een balans te vinden tussen wat ik met code kan, wat haalbaar is, terwijl ik mezelf blijf uitdagen, maar ook geen (voor mij) onmogelijke opdrachten op me neem in de beperkte tijd die we hebben. Dus wat dat betreft ben ik nog zoekende. En ik merk dat ik een hele dag achter mijn laptop coderen best lastig vind.
+
 
 ## BRONNENLIJST
 https://codepen.io/Sidstumple/pen/LEZdEWP?editors=1100 
@@ -89,3 +156,5 @@ https://codepen.io/Sidstumple/pen/LEZdEWP?editors=1100
 https://9elements.github.io/fancy-border-radius/#30.36.30.43--.
 
 https://codepen.io/shooft/pen/dyOXrpZ
+
+
