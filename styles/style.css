@@ -68,7 +68,6 @@ main > div {
 *::after {
   box-sizing: border-box;
   margin: 0;
-  overflow-x: hidden;
 }
 
 :root {  
