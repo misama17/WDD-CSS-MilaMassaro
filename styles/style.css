@@ -11,6 +11,7 @@
   color-scheme:light dark;
 	
   --color-bg:light-dark(#ebeef1, #1A1B1F);
+  --color-text-bg:light-dark(#ebeef1, #232429);
   --color-text:light-dark(#707070, #b1b1b1);
   --color-text-np:light-dark(#b1b1b1, #4f4f4f);
   --color-text-p:light-dark(#FF69B4, #FFb3de);
@@ -89,9 +90,9 @@ main > section:nth-of-type(1) {
   border-bottom: 2px solid var(--color-border);
 
   & > p {
-    color: var(--color-bg);
+    color: var(--color-text-bg);
     text-shadow: 3px 3px 3px var(--color-bsdw-one),
-                -3px -3px 3px var(--color-bsdw-two);
+                -2px -2px 2px var(--color-bsdw-two);
 
     font-size: clamp(3em,15vw,6em);
   }
@@ -125,15 +126,14 @@ h1 {
 body {
   font-family: 'WHOA Top';
   background-color: var(--color-bg);
-  /* overflow-x: hidden; */
 }
 
 h2 {
   font-size: clamp(2.5em,10vw, 3em);
 
-  color: var(--color-bg);
+  color: var(--color-text-bg);
   text-shadow: 2px 2px 2px var(--color-bsdw-one),
-              -2px -2px 2px var(--color-bsdw-two);
+              -1px -1px 1px var(--color-bsdw-two);
 }
 
 h3 {
