@@ -150,6 +150,66 @@ Ik liep deze week een beetje vast met wat ik kon doen. Hierdoor heb ik het gevoe
 De laatste zondag van de vakantie keek ik echt enorm op tegen de minor. Het gaf me zo veel druk, waardoor ik het eigenlijk niet meer wilde doen als ik eerlijk ben... Ik ben altijd iemand die heel hard werkt voor alles en altijd een extra stapje doet. Ik ben niet bang om hard te werken zeg maar. Alleen met deze minor tot nu toe kijk ik er tegenop. Misschien dat ik zo ook achter een van mijn leerdoelen kom, namelijk of dit een vakgebied is dat bij me past. Ik heb het gevoel dat ik niet helemaal mijn creatieve ei kwijt kan nu, ookal zijn de odprachten vrij. Maar ik vind het moeilijk om een balans te vinden tussen wat ik met code kan, wat haalbaar is, terwijl ik mezelf blijf uitdagen, maar ook geen (voor mij) onmogelijke opdrachten op me neem in de beperkte tijd die we hebben. Dus wat dat betreft ben ik nog zoekende. En ik merk dat ik een hele dag achter mijn laptop coderen best lastig vind.
 
 
+**woensdag 11 maart**
+
+Wat heb ik vandaag gedaan?
+
+Ik heb mijn ding helemaal interactief gemaakt.
+Ik heb een workshop gevolgd van Cyd.
+Ik ben begonnen met het stijlen van mijn containers/panels. Dit moet ik morgen nog even afmaken.
+
+
+Hoeveel tijd heeft dit me gekost?
+
+6 uur.
+2 uur interactief maken/bedenken.
+1 uur schetsen van lay-out, uitwerken welke controls ik wil hebben etc.
+1 uur workshop Cyd.
+1 uur containers/panels uitwerken.
+30 min style query toevoegen.
+
+
+Wat heb ik geleerd?
+
+Hoe ik de JS die we gekregen hebben kan gebruiken met de sliders en mijn ontwerp.
+
+
+Wat ga ik morgen doen?
+
+Containers afmaken, font toevoegen.
+
+
+
+**donderdag 12 maart**
+
+Wat heb ik vandaag gedaan?
+
+Vandaag heb ik mijn "waanzinnige" typografie toegevoegd en geanimeerd. Ook heb ik mijn eigen naam toegevoegd in dezelfde neumorphism stijl als dat ik ga gebruiken voor het control panel waar de sliders en modes in zitten.
+Ik heb light dark mode uitgewerkt, zodat hij ook werkend is bij de dingen die neumorphism zijn.
+Ik heb nog wat sliders toegevoegd die aangepast kunnen worden.
+Ik heb 2 modes gemaakt en toegevoegd (codepen) met @container style. Dus nu voldoe ik aan alle eisen.
+
+
+Hoeveel tijd heeft dit me gekost?
+
+6 uur.
+1 uur font animeren en zoeken.
+2 uur neumorphism uitwerken + dark light mode hiervan.
+1 uur extra sliders toevoegen.
+1 uur workshop over variable fonts.
+
+
+Wat heb ik geleerd?
+
+Werken en animeren met variabele fonts.
+
+
+Wat ga ik morgen doen?
+
+Twee presentaties :).
+
+
+
 ## BRONNENLIJST
 https://codepen.io/Sidstumple/pen/LEZdEWP?editors=1100 
 
