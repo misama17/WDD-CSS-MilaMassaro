@@ -210,15 +210,6 @@ Twee presentaties :).
 
 
 
-## REFLECTIE: WEEK 5 (week 3 vak)
-
-Deze week ging ik lekker. Ik heb af kunnen maken wat ik gepland had. Ik hoef volgende week alleen details af te ronden, zoals meer randomness toevoegen. Ook wil ik de 3D versie meer uitwerken. Ik wil denk ik een easter egg toevoegen dat de illustratie dan getekend wordt als een echte spirograph. Moet nog even bedenken hoe ik die modus in kan zetten. Is er ergens een knop verstopt of zo? of als alle sliders helemaal naar links staan bijvoorbeeld? Nog even over nadenken en vragen bij de feedback. Ook will ik een checkbox maken dat je kan kiezen of je de modes/sliders wel of niet kunt zien, zodat je de animatie ook op fullscreen kan bekijken. Ook lijkt het me handig om een pause en play knop voor de animatie toe te voegen. Ik moet ook even kijken naar het "neumorphism" stijl die ik heb gebruikt en of het leesbaarder moet... 
-Ik had veel meer rust in mijn hoofd. Doordat ik dag voor dag bekijk, voel ik minder druk en stress. Ook helpt het dat ik beter begreep waar ik mee bezig was en concreter naar mijn doel kon toewerken. De periode hiervoor was ik vooral ook heel veel aan het experimenteren, waardoor ik niet echt een eindresultaat zag, maar meer opties van richtingen. Dus ik had heel veel ideeën, maar nog niet concreet iets.
-Ik ben blij dat ik veel heb geëxperimenteerd. Hierdoor kon ik ook beter kiezen welke sliders nou het beste zouden werken en interessante dingen zouden geven. Hierdoor kwam ik erachter dat een slider die de aspect-ratio aanpast heel interessant en leuk is om te zien. Ook heb ik door het experimenteren meer geoefend met sibling-index() en 3D transform, wat heel leuk was.
-Ik vraag me nog wel een beetje af of wat ik nu heb wel "generative art" genoeg is... Misschien moet ik hier nog iets op bedenken? Dit ga ik morgen bij de feedback even vragen.
-
-
-
 ## BRONNENLIJST
 https://codepen.io/Sidstumple/pen/LEZdEWP?editors=1100 
 

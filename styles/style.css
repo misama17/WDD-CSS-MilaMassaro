@@ -140,7 +140,7 @@ h3 {
   font-size: clamp(1.5em,7vw,2.5em);
   color: var(--color-text-np);
 
-  margin-top: .5em;
+  margin-top: .4em;
 }
 
 main > section:nth-of-type(2) {
@@ -279,7 +279,7 @@ html:has([value="cmd"]:checked) {
 section:nth-of-type(2) section:nth-of-type(3) {
   grid-area: sliders;
 
-  height: 90svh;
+  height: 65svh;
   border-radius: 1.5rem;
 
   box-shadow: 10px 10px 10px 0 var(--color-bsdw-one),
@@ -353,7 +353,7 @@ section:nth-of-type(2) {
       var(--color-two) var(--mix-ratio)
     ); */
     
-    animation: --rotate-self 10s infinite alternate ease-in-out;
+    animation: --rotate-self calc(var(--speed) * 1s) infinite alternate ease-in-out;
     animation-delay: calc(-.15s * var(--sbindex));
     
   }
