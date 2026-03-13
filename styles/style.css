@@ -134,6 +134,7 @@ h2 {
   color: var(--color-text-bg);
   text-shadow: 2px 2px 2px var(--color-bsdw-one),
               -1px -1px 1px var(--color-bsdw-two);
+<<<<<<< Updated upstream
 }
 
 h3 {
@@ -171,6 +172,8 @@ section:nth-of-type(2) section:nth-of-type(2) {
 
   box-shadow: 10px 10px 10px 0 var(--color-bsdw-one),
               -10px -10px 10px 0 var(--color-bsdw-two);
+=======
+>>>>>>> Stashed changes
   
   margin: 1.5em;
   padding: 1em;
@@ -359,6 +362,229 @@ section:nth-of-type(2) {
   }
 }
 
+h3 {
+  font-size: clamp(1.5em,7vw,2.5em);
+  color: var(--color-text-np);
+
+  margin-top: .4em;
+}
+
+main > section:nth-of-type(2) {
+  display: grid;
+  grid-template-areas: 
+  "spirograph"
+  "modes"
+  "sliders";
+}
+
+
+
+/* MARK: Animatie divs
+/* -------- SECTION: ANIMATION SPIROGRAPH --------  */
+section:nth-of-type(2) section:nth-of-type(1) {
+  grid-area: spirograph;
+  place-self: center;
+  margin: 10em 0;
+}
+
+/* MARK: MODES
+/* -------- SECTION: MODES --------  */
+section:nth-of-type(2) section:nth-of-type(2) {
+  grid-area: modes;
+  height: 30svh;
+  border-radius: 1.5rem;
+  border: .25px solid var(--color-border);
+
+  box-shadow: 10px 10px 10px 0 var(--color-bsdw-one),
+              -10px -10px 10px 0 var(--color-bsdw-two);
+  
+  margin: 1.5em;
+  padding: 1em;
+
+  & div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1em;
+    margin-top: .5em;
+  }
+
+  & div div {
+    box-shadow: 10px 10px 10px 0 var(--color-bsdw-one),
+                -10px -10px 10px 0 var(--color-bsdw-two);
+    border: .25px solid var(--color-border);
+    font-size: 1rem;
+    width: fit-content;
+    height: 1em;
+    border-radius: 5rem;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    
+    color: var(--color-text-np);
+    
+    background: var(--color-bg);
+    
+    transition: all .5s ease;
+
+    &:has(input:checked) {
+      box-shadow: inset 5px 5px 7px 0 var(--color-bsdw-one),
+                  inset -5px -5px 7px 0 var(--color-bsdw-two);
+      color: var(--color-one);
+      border: .25px solid var(--color-border);
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 5px 5px 5px 0 var(--color-bsdw-one),
+                  -3px -3px 3px 0 var(--color-bsdw-two);
+    }
+  }
+
+  & input[type="radio"] {
+    display: none;
+  }
+}
+
+html:has([value="solid"]:checked) {
+	--solid:true;
+}
+
+html:has([value="dotted"]:checked) {
+	--dotted:true;
+}
+
+html:has([value="random"]:checked) {
+	--random:true;
+}
+
+html:has([value="cmd"]:checked) {
+	--cmd:true;
+}
+
+
+/* FUNCTION TIP: */
+/* @function --function(--multiplier){
+result: calc(var(--size) * var(--multiplier)) } 
+
+--size: clamp(0.5rem,2.5vw,1.5rem);
+border-width: --size(1) --size(3) --size(3) --size(1);*/
+
+
+@container style(--solid:true) {
+  section:nth-of-type(1) div div {
+    border: calc(var(--border-size) * 1px) solid;
+  }
+}
+
+@container style(--dotted:true) {
+  section:nth-of-type(1) div div {
+    border: calc(var(--border-size) * 1px) dotted;
+  }
+}
+
+@container style(--random:true) {
+  section:nth-of-type(2) section:nth-of-type(1) div div {
+    --mix-ratio: calc(var(--sbindex) * 5%);
+    
+    border-color: color-mix(
+      in oklch, 
+      var(--color-one), 
+      var(--color-two) var(--mix-ratio)
+    );
+  }
+}
+
+@container style(--cmd:true) {
+  section:nth-of-type(2) section:nth-of-type(1) div div {
+    --mix-ratio: calc(var(--sbindex) * 5%);
+
+    border-color: color-mix(
+      in oklch, 
+      var(--color-cmd-yellow), 
+      var(--color-cmd-lavendel) var(--mix-ratio)
+    );
+  }
+}
+
+
+
+/* MARK: SLIDERS
+/* -------- SECTION: SLIDERS --------  */
+section:nth-of-type(2) section:nth-of-type(3) {
+  grid-area: sliders;
+
+  height: 65svh;
+  border-radius: 1.5rem;
+
+  box-shadow: 10px 10px 10px 0 var(--color-bsdw-one),
+              -10px -10px 10px 0 var(--color-bsdw-two);
+  
+  margin: 1.5em;
+  padding: 1em;
+
+  & label {
+    display: flex;
+    gap: .5em;
+    line-height: 1;
+    align-items: center;
+    font-size: clamp(1em,5vw,2em);
+
+    color: var(--color-text-np);
+  }
+}
+
+
+
+/* MARK: Animatie divs
+/* -------- SECTION: ANIMATION SPIROGRAPH --------  */
+section:nth-of-type(2) {
+  & section:nth-of-type(1) {
+    display: grid;
+    place-items: center;
+  }
+
+  & section:nth-of-type(1) > div {
+    grid-area: 1/1;
+    width: clamp(20em,50vw,40em);
+    aspect-ratio: 1;
+    
+    --sbindex: sibling-index();
+    
+    transform: 
+      translateZ(calc(var(--sbindex) * .25em))
+      rotate(calc(var(--sbindex) * 10deg * var(--rotate)))
+      scale(calc(1 - var(--sbindex) * 0.025 * var(--scale)));
+    
+  }
+
+  & section:nth-of-type(1) div div {
+    width: 100%;
+    aspect-ratio: var(--ratio);
+
+    /*  https://9elements.github.io/fancy-border-radius/#30.36.30.43--.  */
+    /*  https://codepen.io/shooft/pen/dyOXrpZ  */
+    /*   border-radius: 36% 64% 57% 43% / 30% 30% 70% 70%; */
+    /*  !! GEMINI voor berekening van border-radius. Vraag: hoe ik met behulp van sibling-index() elk kind net een andere vorm kan geven. Toen heb ik zelf de waardes veranderd en ook een calc voor de andere toegevoegd (niet alleen eerste).*/
+    /*  Met ertussen iets meer random blobs achtig:  */
+    /*  !! ChatGPT gevraagd om me te helpen met het meer random maken van de blob  */
+    border-radius:
+    calc(50% * var(--shape) + 3%)
+    calc(50% * var(--shape) + 21%)
+    calc(50% * var(--shape) + 19%) 
+    calc(50% * var(--shape) + 14%)  
+    /
+    calc(100% * var(--shape) - 7%)
+    calc(100% * var(--shape) + 11%)
+    calc(100% * var(--shape) - 18%)
+    calc(100% * var(--shape) + 11%);
+    
+    
+    animation: --rotate-self calc(var(--speed) * 1s) infinite alternate ease-in-out;
+    animation-delay: calc(-.15s * var(--sbindex));
+    
+  }
+}
+
 
 /* Zodat de sibling geerfd wordt: */
 @property --sbindex {
@@ -408,6 +634,7 @@ section:nth-of-type(2) {
   section:nth-of-type(2) section:nth-of-type(2) {
     grid-area: modes;
     height: 30svh;
+<<<<<<< Updated upstream
     border-radius: 1.5rem;
     border: .25px solid var(--color-border);
 
@@ -415,6 +642,8 @@ section:nth-of-type(2) {
                 -10px -10px 10px 0 var(--color-bsdw-two);
     
     margin: 1.5em;
+=======
+>>>>>>> Stashed changes
   }
 
 
@@ -424,6 +653,7 @@ section:nth-of-type(2) {
     grid-area: sliders;
 
     height: 60svh;
+<<<<<<< Updated upstream
     border-radius: 1.5rem;
     border: .25px solid var(--color-border);
 
@@ -438,5 +668,7 @@ section:nth-of-type(2) {
       align-items: center;
       font-size: clamp(1em,5vw,2em);
     }
+=======
+>>>>>>> Stashed changes
   }
 }
