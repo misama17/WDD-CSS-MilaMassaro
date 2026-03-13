@@ -77,6 +77,11 @@
 }
 
 
+
+
+
+
+
 /* MARK: Intro
 /* -------- SECTION: INTRODUCTION --------  */
 main > section:nth-of-type(1) {
@@ -110,14 +115,6 @@ h1 {
   animation: title-animation 4s infinite alternate ease-in-out;
 }
 
-@keyframes title-animation {
-  from {
-    font-variation-settings: "hrzn" 0, "vert" -1000, "rota" -45, "zoom" -1000;
-  }
-  to {
-    font-variation-settings: "hrzn" 400, "vert" 1000, "rota" 45, "zoom" 50;
-  }
-}
 
 
 
@@ -153,13 +150,59 @@ main > section:nth-of-type(2) {
 
 
 
-/* MARK: Animatie divs
+
+
+
+/* MARK: ANIMATIE
 /* -------- SECTION: ANIMATION SPIROGRAPH --------  */
-section:nth-of-type(2) section:nth-of-type(1) {
-  grid-area: spirograph;
-  place-self: center;
-  margin: 10em 0;
+section:nth-of-type(2) {
+  & section:nth-of-type(1) {
+    grid-area: spirograph;
+    margin: 10em 0;
+    display: grid;
+    place-items: center;
+  }
+
+  & section:nth-of-type(1) > div {
+    grid-area: 1/1;
+    width: clamp(20em,50vw,40em);
+    aspect-ratio: 1;
+    
+    --sbindex: sibling-index();    
+  }
+
+  & section:nth-of-type(1) div div {
+    width: 100%;
+    aspect-ratio: var(--ratio);
+
+    /*  https://9elements.github.io/fancy-border-radius/#30.36.30.43--.  */
+    /*  https://codepen.io/shooft/pen/dyOXrpZ  */
+    /*   border-radius: 36% 64% 57% 43% / 30% 30% 70% 70%; */
+    /*  !! GEMINI voor berekening van border-radius. Vraag: hoe ik met behulp van sibling-index() elk kind net een andere vorm kan geven. Toen heb ik zelf de waardes veranderd en ook een calc voor de andere toegevoegd (niet alleen eerste).*/
+    /*  Met ertussen iets meer random blobs achtig:  */
+    /*  !! ChatGPT gevraagd om me te helpen met het meer random maken van de blob  */
+    border-radius:
+    calc(50% * var(--shape) + 3%)
+    calc(50% * var(--shape) + 21%)
+    calc(50% * var(--shape) + 19%) 
+    calc(50% * var(--shape) + 14%)  
+    /
+    calc(100% * var(--shape) - 7%)
+    calc(100% * var(--shape) + 11%)
+    calc(100% * var(--shape) - 18%)
+    calc(100% * var(--shape) + 11%);    
+  }
 }
+
+/* Zodat de sibling geerfd wordt: */
+@property --sbindex {
+  syntax:"<integer>";
+  inherits:true;
+  initial-value: 1;
+}
+
+
+
 
 /* MARK: MODES
 /* -------- SECTION: MODES --------  */
@@ -219,61 +262,6 @@ section:nth-of-type(2) section:nth-of-type(2) {
   }
 }
 
-html:has([value="solid"]:checked) {
-	--solid:true;
-}
-
-html:has([value="dotted"]:checked) {
-	--dotted:true;
-}
-
-html:has([value="random"]:checked) {
-	--random:true;
-}
-
-html:has([value="cmd"]:checked) {
-	--cmd:true;
-}
-
-
-@container style(--solid:true) {
-  section:nth-of-type(1) div div {
-    border: calc(var(--border-size) * 1px) solid;
-  }
-}
-
-@container style(--dotted:true) {
-  section:nth-of-type(1) div div {
-    border: calc(var(--border-size) * 1px) dotted;
-  }
-}
-
-@container style(--random:true) {
-  section:nth-of-type(2) section:nth-of-type(1) div div {
-    --mix-ratio: calc(var(--sbindex) * 5%);
-    
-    border-color: color-mix(
-      in oklch, 
-      var(--color-one), 
-      var(--color-two) var(--mix-ratio)
-    );
-  }
-}
-
-@container style(--cmd:true) {
-  section:nth-of-type(2) section:nth-of-type(1) div div {
-    --mix-ratio: calc(var(--sbindex) * 5%);
-
-    border-color: color-mix(
-      in oklch, 
-      var(--color-cmd-yellow), 
-      var(--color-cmd-lavendel) var(--mix-ratio)
-    );
-  }
-}
-
-
-
 /* MARK: SLIDERS
 /* -------- SECTION: SLIDERS --------  */
 section:nth-of-type(2) section:nth-of-type(3) {
@@ -301,73 +289,134 @@ section:nth-of-type(2) section:nth-of-type(3) {
 
 
 
-/* MARK: Animatie divs
-/* -------- SECTION: ANIMATION SPIROGRAPH --------  */
-section:nth-of-type(2) {
-  & section:nth-of-type(1) {
-    display: grid;
-    place-items: center;
+
+
+html:has([value="solid"]:checked) {
+	--solid:true;
+}
+
+html:has([value="dotted"]:checked) {
+	--dotted:true;
+}
+
+html:has([value="random"]:checked) {
+	--random:true;
+}
+
+html:has([value="cmd"]:checked) {
+	--cmd:true;
+}
+
+html:has([value="2D"]:checked) {
+	--2D:true;
+}
+
+html:has([value="3D"]:checked) {
+	--3D:true;
+}
+
+
+/* -------- SOLID --------  */
+@container style(--solid:true) {
+  section:nth-of-type(1) div div {
+    border: calc(var(--border-size) * 1px) solid;
   }
+}
 
-  & section:nth-of-type(1) > div {
-    grid-area: 1/1;
-    width: clamp(20em,50vw,40em);
-    aspect-ratio: 1;
-    
-    --sbindex: sibling-index();
-    
-    transform: 
-      translateZ(calc(var(--sbindex) * .25em))
-      rotate(calc(var(--sbindex) * 10deg * var(--rotate)))
-      scale(calc(1 - var(--sbindex) * 0.025 * var(--scale)));
-    
+/* -------- DOTTED --------  */
+@container style(--dotted:true) {
+  section:nth-of-type(1) div div {
+    border: calc(var(--border-size) * 1px) dotted;
   }
+}
 
-  & section:nth-of-type(1) div div {
-    width: 100%;
-    aspect-ratio: var(--ratio);
-
-    /*  https://9elements.github.io/fancy-border-radius/#30.36.30.43--.  */
-    /*  https://codepen.io/shooft/pen/dyOXrpZ  */
-    /*   border-radius: 36% 64% 57% 43% / 30% 30% 70% 70%; */
-    /*  !! GEMINI voor berekening van border-radius. Vraag: hoe ik met behulp van sibling-index() elk kind net een andere vorm kan geven. Toen heb ik zelf de waardes veranderd en ook een calc voor de andere toegevoegd (niet alleen eerste).*/
-    /*  Met ertussen iets meer random blobs achtig:  */
-    /*  !! ChatGPT gevraagd om me te helpen met het meer random maken van de blob  */
-    border-radius:
-    calc(50% * var(--shape) + 3%)
-    calc(50% * var(--shape) + 21%)
-    calc(50% * var(--shape) + 19%) 
-    calc(50% * var(--shape) + 14%)  
-    /
-    calc(100% * var(--shape) - 7%)
-    calc(100% * var(--shape) + 11%)
-    calc(100% * var(--shape) - 18%)
-    calc(100% * var(--shape) + 11%);
-    
-    
-    /* --mix-ratio: calc(var(--sbindex) * 5%);
+/* -------- RANDOM COLORS --------  */
+@container style(--random:true) {
+  section:nth-of-type(2) section:nth-of-type(1) div div {
+    --mix-ratio: calc(var(--sbindex) * 5%);
     
     border-color: color-mix(
       in oklch, 
       var(--color-one), 
       var(--color-two) var(--mix-ratio)
-    ); */
-    
-    animation: --rotate-self calc(var(--speed) * 1s) infinite alternate ease-in-out;
-    animation-delay: calc(-.15s * var(--sbindex));
-    
+    );
+  }
+}
+
+/* -------- CMD COLORS --------  */
+@container style(--cmd:true) {
+  section:nth-of-type(2) section:nth-of-type(1) div div {
+    --mix-ratio: calc(var(--sbindex) * 5%);
+
+    border-color: color-mix(
+      in oklch, 
+      var(--color-cmd-yellow), 
+      var(--color-cmd-lavendel) var(--mix-ratio)
+    );
+  }
+}
+
+/* -------- 2D --------  */
+@container style(--2D:true) {
+  section:nth-of-type(2) {
+    & section:nth-of-type(1) > div {
+      transform: 
+        translateZ(calc(var(--sbindex) * .25em))
+        rotate(calc(var(--sbindex) * 10deg * var(--rotate)))
+        scale(calc(1 - var(--sbindex) * 0.025 * var(--scale)));
+    }
+
+    & section:nth-of-type(1) div div {    
+      animation: --rotate-self calc(var(--speed) * 1s) infinite alternate ease-in-out;
+      animation-delay: calc(-.15s * var(--sbindex));
+    }
+  }
+}
+
+/* -------- 3D --------  */
+@container style(--3D:true) {
+  section:nth-of-type(2) {
+    & section:nth-of-type(1) div {
+      perspective: 30em;
+      transform-style: preserve-3d;
+      animation: --po 10s infinite alternate ease-in-out;
+    }
+
+    & section:nth-of-type(1) div div {    
+      animation: --draai calc(var(--speed) * 1s) infinite alternate ease-in-out;
+      /* animation-delay: calc(-.15s * var(--sbindex)); */
+      
+      border-radius:
+      calc(50% * var(--shape) + 1%)
+      calc(50% * var(--shape) + 2%)
+      calc(50% * var(--shape) + 4%) 
+      calc(50% * var(--shape) + 3%)  
+      /
+      calc(100% * var(--shape) - 7%)
+      calc(100% * var(--shape) + 2%)
+      calc(100% * var(--shape) - 4%)
+      calc(100% * var(--shape) + 4%);   
+      }
   }
 }
 
 
-/* Zodat de sibling geerfd wordt: */
-@property --sbindex {
-  syntax:"<integer>";
-  inherits:true;
-  initial-value: 1;
+
+
+
+
+/* MARK: Animaties
+/* -------- TITLE ANIMATION --------  */
+@keyframes title-animation {
+  from {
+    font-variation-settings: "hrzn" 0, "vert" -1000, "rota" -45, "zoom" -1000;
+  }
+  to {
+    font-variation-settings: "hrzn" 400, "vert" 1000, "rota" 45, "zoom" 50;
+  }
 }
 
-
+/* -------- 2D ANIMATION SPIROGRAPH --------  */
 @keyframes --rotate-self {
   0% {
     transform: 
@@ -378,6 +427,39 @@ section:nth-of-type(2) {
       rotate(2turn);
   }
 }
+
+/* -------- 3D ANIMATION PERSPECTIVE ORIGIN --------  */
+@keyframes --po {
+  0% {
+    perspective-origin: 60% 50%;
+  }
+  100% {
+    perspective-origin: 70% 70%;
+  }
+}
+
+/* -------- 3D ANIMATION SPIROGRAPH --------  */
+@keyframes --draai {
+  0% {
+    transform:
+    rotate(calc(var(--rotate) * 0deg))
+    translatez(1em)
+    rotatex(0turn)
+    rotatey(0turn)
+    scale(calc(1 + var(--sbindex) * 0.01));
+  }
+  100% {
+    transform:
+    rotate(calc(var(--rotate) * 4deg))
+    translatez(2em)
+    rotatex(3turn)
+    rotatey(3turn)
+    scale(calc(1 + var(--sbindex) * 0.03));
+  }
+}
+
+
+
 
 
 
@@ -440,3 +522,5 @@ section:nth-of-type(2) {
     }
   }
 }
+
+
