@@ -223,7 +223,7 @@ section:nth-of-type(2) {
 
   & section:nth-of-type(2) div div {
     width: 100%;
-    aspect-ratio: var(--ratio);
+    aspect-ratio: calc(var(--ratio) + 1);
 
     /*  https://9elements.github.io/fancy-border-radius/#30.36.30.43--.  */
     /*  https://codepen.io/shooft/pen/dyOXrpZ  */
@@ -361,7 +361,7 @@ section:nth-of-type(2) section:nth-of-type(3) {
                 -8px -8px 8px 0 var(--color-bsdw-two);
     border: .25px solid var(--color-border);
     font-size: 1rem;
-    width: 6em;
+    width: 10em;
     height: 1em;
     place-content: center;
     border-radius: 5rem;
@@ -502,6 +502,20 @@ html:has([value="pause"]:checked) {
   }
 }
 
+/* section:nth-of-type(2) section:nth-of-type(2) div div {
+  animation: if(
+    style((--speed: 0) and (--rotate: 1)): --rotate-self 2s infinite alternate ease-in-out;
+
+    else: --rotate-self calc(var(--speed) * 1s) infinite alternate ease-in-out;
+  );
+
+} */
+
+
+
+
+
+
 /* -------- 2D --------  */
 @container style(--2D:true) {
   section:nth-of-type(2) {
@@ -522,10 +536,18 @@ html:has([value="pause"]:checked) {
 /* -------- 3D --------  */
 @container style(--3D:true) {
   section:nth-of-type(2) {
+    & section:nth-of-type(2) {
+      transform:
+        rotateY(calc(var(--rotate) * 360deg));
+      transition: transform 0.2s linear;
+    }
+
     & section:nth-of-type(2) div {
-      perspective: 10em;
+      width: clamp(10em, 35vw, 40em);
+      
+      perspective: 100em;
       transform-style: preserve-3d;
-      /* animation: --po 10s infinite alternate ease-in-out; */
+      animation: --po calc(var(--speed) * 5s) infinite alternate ease-in-out;
     }
 
     & section:nth-of-type(2) div div {    
@@ -544,10 +566,56 @@ html:has([value="pause"]:checked) {
       calc(100% * var(--shape) + 4%);   
       }
   }
+
+  section:nth-of-type(2) section:nth-of-type(4) {
+    & h3:nth-of-type(1) {
+      display:none; 
+    }
+    
+    & label:nth-of-type(1),
+      & label:nth-of-type(2),
+      & label:nth-of-type(3) {
+      display:none;
+    }
+  }
+
+
+}
+
+/* -------- EASTER EGG --------  */
+@property --angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+
+
+@container style(--speed:0) and style(--rotate:0) {
+  section:nth-of-type(2) section:nth-of-type(2) div div {
+    /*  Nils heeft me geholpen met het maken van de animatie.  */
+    mask-image: conic-gradient(#000 var(--angle), #0000 0deg);
+    
+    animation: draw 1s linear forwards;
+    animation-delay: calc(var(--sbindex) * 1s);
+
+    transform:
+      rotate(calc(var(--sbindex) * 2deg))
+      scale(calc(1 + var(--sbindex) * 0.01));
+  }
 }
 
 /* -------- OPTIONS --------  */
-@container style(--options:false) { 
+@container style(--options:false) {
+  main > section:nth-of-type(2) {
+    height: 100svh;
+
+    grid-template-areas:
+    "spirograph"
+    "checkbox";
+
+    grid-template-rows: 90svh 1fr;
+  }
+
   section:nth-of-type(2) section:nth-of-type(3),
   section:nth-of-type(2) section:nth-of-type(4) {
     display:none;
@@ -559,7 +627,6 @@ html:has([value="pause"]:checked) {
     animation-play-state: paused;
   }
 }
-
 
 
 
@@ -600,24 +667,28 @@ html:has([value="pause"]:checked) {
 @keyframes --rotate-3d {
   0% {
     transform:
-    rotate(calc(var(--sbindex) * 0deg))
+    rotate(calc(var(--sbindex) * 2deg))
     translatez(1em)
     rotatex(0turn)
     rotatey(0turn)
-    scale(calc(1 + var(--sbindex) * 0.01));
+    scale(calc(1 + var(--sbindex) * var(--scale) * 0.01));
   }
   100% {
     transform:
-    rotate(calc(var(--sbindex) * 4deg))
-    translatez(2em)
+    rotate(calc(var(--sbindex) * 6deg))
+    translatez(3em)
     rotatex(3turn)
     rotatey(3turn)
-    scale(calc(1 + var(--sbindex) * 0.03));
+    scale(calc(1 + var(--sbindex) * var(--scale) * 0.03));
   }
 }
 
-
-
+/* -------- EASTER EGG ANIMATION --------  */
+@keyframes draw {
+  to {
+    --angle: 360deg;
+  }
+}
 
 
 
@@ -659,6 +730,12 @@ html:has([value="pause"]:checked) {
     }
   }
   
+  @container style(--3D:true) {
+    section:nth-of-type(2) section:nth-of-type(2) > div {
+      width: clamp(10em, 25vw, 30em);
+    }
+  }
+  
 
   /* MARK: Animatie divs
   /* -------- SECTION: ANIMATION SPIROGRAPH --------  */
@@ -686,5 +763,3 @@ html:has([value="pause"]:checked) {
     }
   }
 }
-
-
