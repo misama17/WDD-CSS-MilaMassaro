@@ -61,6 +61,7 @@
 
 /* MARK: Fonts
 /* -------- TYPOGRAPHY TITLE --------  */
+/* https://www.vectrotype.com/whoa */
 @font-face {
   font-family: 'WHOA Spine';
   src: url(../fonts/WHOA-Spine-v0.4.1.ttf);
@@ -125,18 +126,18 @@ h1 {
 
   & span {
     text-align: center;
-    line-height: .75;
+    line-height: .5;
 
     &:nth-of-type(1) {
       grid-area: s;
     }
 
     &:nth-of-type(2) {
-    grid-area: p;
+      grid-area: p;
     }
 
     &:nth-of-type(3) {
-    grid-area: i1;
+      grid-area: i1;
     }
 
     &:nth-of-type(4) {
@@ -171,7 +172,7 @@ h1 {
 /* MARK: General
 /* -------- GENERAL LAY-OUT --------  */
 body {
-  font-family: 'WHOA Top';
+  font-family: 'WHOA Top', Arial, sans-serif;
   background-color: var(--color-bg);
 }
 
@@ -184,16 +185,15 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.5em,7vw,2.5em);
+  font-size: clamp(1.5em,10vw,2.25em);
   color: var(--color-text-np);
-
-  margin-top: .4em;
 }
 
 main > section:nth-of-type(2) {
   display: grid;
   grid-template-areas: 
   "spirograph"
+  "checkbox"
   "modes"
   "sliders";
 }
@@ -203,7 +203,7 @@ main > section:nth-of-type(2) {
 
 
 
-/* MARK: ANIMATIE
+/* MARK: ANIMATION
 /* -------- SECTION: ANIMATION SPIROGRAPH --------  */
 section:nth-of-type(2) {
   & section:nth-of-type(1) {
@@ -253,6 +253,88 @@ section:nth-of-type(2) {
 
 
 
+/* MARK: CHECKBOX
+/* -------- SECTION: OPTIONS (open or closed) --------  */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch */
+section:nth-of-type(2) > label {
+  grid-area: checkbox;
+  font-size: 1.5em;
+  margin: 1em 1em .5em 1em;
+
+  position: relative;
+  display: grid;
+  grid-template-areas:
+  "toggle text";
+  place-items: center;
+  
+  height: 1.5em;
+  width: 7em;
+
+  & span:nth-of-type(2) {
+    grid-area: text;
+    color: var(--color-text-np);
+  }
+
+  & input {
+    opacity: 0;
+
+    &:checked ~ span:nth-of-type(2) {
+      color: var(--color-text-p);
+      transition: .4s;
+    }
+
+    &:checked + span:before {
+      transform: translateX(1.75em);
+    }
+  }
+
+  & span:nth-of-type(1) {
+    grid-area: toggle;
+    position: absolute;
+    inset: 0;
+    transition: .4s;
+    width: 3em;
+    box-shadow: 8px 8px 8px 0 var(--color-bsdw-one),
+                -8px -8px 8px 0 var(--color-bsdw-two);
+    border: .25px solid var(--color-border);
+    border-radius: 5rem;
+
+    &::before {
+      position: absolute;
+      top: .1em;
+      content: "";
+      height: 1.2em;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      place-items: center;
+
+      background-color: var(--color-bg);
+      box-shadow: 3px 3px 6px var(--color-bsdw-one),
+                  -3px -3px 6px var(--color-bsdw-two);
+
+      transition: .4s;
+
+    }
+  }
+
+  &:has(input:not(:checked)) ~ section:nth-of-type(2),
+  &:has(input:not(:checked)) ~ section:nth-of-type(3) {
+    display: none;
+  }
+}
+
+section:nth-of-type(2):has(> label input:not(:checked)) {
+  height: 100svh;
+  
+  grid-template-areas:
+  "spirograph"
+  "checkbox";
+
+  grid-template-rows: 90svh 1fr;
+}
+
+
+
 
 /* MARK: MODES
 /* -------- SECTION: MODES --------  */
@@ -265,24 +347,26 @@ section:nth-of-type(2) section:nth-of-type(2) {
   box-shadow: 10px 10px 10px 0 var(--color-bsdw-one),
               -10px -10px 10px 0 var(--color-bsdw-two);
   
-  margin: 1.5em;
-  padding: 1em;
+  margin: .75em 1em;
+  padding: .75em;
+
+  transition: 2s;
 
   & div {
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 1em;
-    margin-top: .5em;
   }
 
   & div div {
-    box-shadow: 10px 10px 10px 0 var(--color-bsdw-one),
-                -10px -10px 10px 0 var(--color-bsdw-two);
+    box-shadow: 8px 8px 8px 0 var(--color-bsdw-one),
+                -8px -8px 8px 0 var(--color-bsdw-two);
     border: .25px solid var(--color-border);
     font-size: 1rem;
-    width: fit-content;
+    width: 6em;
     height: 1em;
+    place-content: center;
     border-radius: 5rem;
     padding: 1.5em;
     margin-bottom: 1em;
@@ -317,21 +401,20 @@ section:nth-of-type(2) section:nth-of-type(2) {
 section:nth-of-type(2) section:nth-of-type(3) {
   grid-area: sliders;
 
-  height: 65svh;
+  height: 60svh;
   border-radius: 1.5rem;
 
   box-shadow: 10px 10px 10px 0 var(--color-bsdw-one),
               -10px -10px 10px 0 var(--color-bsdw-two);
   
-  margin: 1.5em;
+  margin: .75em 1em;
   padding: 1em;
 
   & label {
     display: flex;
     gap: .5em;
-    line-height: 1;
     align-items: center;
-    font-size: clamp(1em,5vw,2em);
+    font-size: clamp(1.6em,5vw,2em);
 
     color: var(--color-text-np);
   }
@@ -340,7 +423,8 @@ section:nth-of-type(2) section:nth-of-type(3) {
 
 
 
-
+/* MARK: CHECKBOXES VALUES
+/* -------- SECTION: MODES --------  */
 html:has([value="solid"]:checked) {
 	--solid:true;
 }
@@ -517,7 +601,7 @@ html:has([value="3D"]:checked) {
 
 /* MARK: BIG SCREEN
 /* -------- MEDIA QUERY --------  */
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 48em) {
   h1 {
     grid-template-areas:
     "s    p   i1  r   a   l   i2   n   g";
@@ -529,13 +613,25 @@ html:has([value="3D"]:checked) {
   main > section:nth-of-type(2) {
     display: grid;
     grid-template-areas: 
+    "checkbox spirograph"
     "modes    spirograph"
     "sliders  spirograph";
-    grid-template-columns: minmax(20em,30em) 1fr;
+    grid-template-columns: minmax(15em,30em) 1fr;
     width: 100%;
     
   }
   
+  /* MARK: Changing grid full screen
+  /* -------- FULLSCREEN -------- */
+  /* !! ChatGPT: hoe spreek ik (met :has) de section aan waar het label zelf in zit? */
+  section:nth-of-type(2):has(> label input:not(:checked)) {
+      grid-template-areas:
+      "checkbox     checkbox"
+      "spirograph   spirograph";
+
+      grid-template-rows: 1fr 90svh;
+    }
+
   /* MARK: Animatie divs
   /* -------- SECTION: ANIMATION SPIROGRAPH --------  */
   section:nth-of-type(2) section:nth-of-type(1) {
@@ -547,14 +643,7 @@ html:has([value="3D"]:checked) {
   /* -------- SECTION: MODES --------  */
   section:nth-of-type(2) section:nth-of-type(2) {
     grid-area: modes;
-    height: 30svh;
-    border-radius: 1.5rem;
-    border: .25px solid var(--color-border);
-
-    box-shadow: 10px 10px 10px 0 var(--color-bsdw-one),
-                -10px -10px 10px 0 var(--color-bsdw-two);
-    
-    margin: 1.5em;
+    height: 30svh;    
   }
 
 
@@ -563,20 +652,18 @@ html:has([value="3D"]:checked) {
   section:nth-of-type(2) section:nth-of-type(3) {
     grid-area: sliders;
 
-    height: 60svh;
+    height: 55svh;
     border-radius: 1.5rem;
     border: .25px solid var(--color-border);
 
     box-shadow: 10px 10px 10px 0 var(--color-bsdw-one),
                 -10px -10px 10px 0 var(--color-bsdw-two);
-    
-    margin: 1.5em;
 
     & label {
       display: flex;
       gap: .5em;
       align-items: center;
-      font-size: clamp(1em,5vw,2em);
+      font-size: clamp(1em,3vw,1.75em);
     }
   }
 }
