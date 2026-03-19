@@ -529,20 +529,6 @@ html:has([value="pause"]:checked) {
   }
 }
 
-/* section:nth-of-type(2) section:nth-of-type(2) div div {
-  animation: if(
-    style((--speed: 0) and (--rotate: 1)): --rotate-self 2s infinite alternate ease-in-out;
-
-    else: --rotate-self calc(var(--speed) * 1s) infinite alternate ease-in-out;
-  );
-
-} */
-
-
-
-
-
-
 /* -------- 2D --------  */
 @container style(--2D:true) {
   section:nth-of-type(2) {
@@ -657,6 +643,10 @@ html:has([value="pause"]:checked) {
 
 
 
+
+
+
+
 /* MARK: Animaties
 /* -------- TITLE ANIMATION --------  */
 @keyframes title-animation {
@@ -679,16 +669,6 @@ html:has([value="pause"]:checked) {
       rotate(2turn);
   }
 }
-
-/* -------- 3D ANIMATION PERSPECTIVE ORIGIN --------  */
-/* @keyframes --po {
-  0% {
-    perspective-origin: 60% 50%;
-  }
-  100% {
-    perspective-origin: 70% 70%;
-  }
-} */
 
 /* -------- 3D ANIMATION SPIROGRAPH --------  */
 @keyframes --rotate-3d {
