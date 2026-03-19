@@ -266,7 +266,6 @@ section:nth-of-type(2) section:nth-of-type(2) div div {
 
     else: --rotate-self calc(var(--speed) * 1s) infinite alternate ease-in-out;
   );
-
 }
 
 Hier is de nieuwe animatie nog niet in verwerkt, maar het if gedeelte werkte wel. Maar ik liep er wel tegenaan dat ik meerdere dingen moest aanpassen en dan was de @container style veel makkelijker om te gebruiken.
