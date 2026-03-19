@@ -299,4 +299,8 @@ https://9elements.github.io/fancy-border-radius/#30.36.30.43--.
 
 https://codepen.io/shooft/pen/dyOXrpZ
 
+https://www.vectrotype.com/whoa
 
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
+
+https://codepen.io/davidpetrey/pen/ZEORRRj
