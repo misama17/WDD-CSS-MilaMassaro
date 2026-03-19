@@ -12,17 +12,15 @@
 	
   --color-bg:light-dark(#ebeef1, #1A1B1F);
   --color-text-bg:light-dark(#ebeef1, #232429);
-  --color-text:light-dark(#707070, #b1b1b1);
+  --color-text:light-dark(#b1b1b1, #FFb3de);
   --color-text-np:light-dark(#b1b1b1, #4f4f4f);
   --color-text-p:light-dark(#FF69B4, #FFb3de);
   --color-border:light-dark(#e5e5e5, #17181c);
   --color-bsdw-one:light-dark(#00000029, #101114);
   --color-bsdw-two:light-dark(#ffffffb3, #24252a);
 
-  --color-cmd-yellow: #FFF021;
-  --color-cmd-papaya: #FAF0D7;
-  --color-cmd-lavendel: #F0EBF0;
-  --color-cmd-mint: #E0F5DF;
+  --color-cmd-yellow:light-dark(#000, #FFF021);
+  --color-cmd-lavendel:light-dark(#000 ,#F0EBF0);
 }
 
 /* VRAAG!!: DEZE TOEVOEGEN AAN :ROOT HIERBOVEN? */
@@ -186,7 +184,7 @@ h2 {
 
 h3 {
   font-size: clamp(1.5em,10vw,2.25em);
-  color: var(--color-text-np);
+  color: var(--color-text);
 }
 
 main > section:nth-of-type(2) {
@@ -257,6 +255,8 @@ section:nth-of-type(2) {
 /* -------- SECTION: OPTIONS (open or closed) --------  */
 section:nth-of-type(2) section:nth-of-type(1) {
   display: flex;
+  flex-direction: column;
+  gap: .5em;
   margin: 1em 1em .5em 1em;
 }
 
@@ -280,6 +280,7 @@ section:nth-of-type(2) section:nth-of-type(1) > label {
 
   &:nth-of-type(2) {
     width: 9.5em;
+    margin-bottom: .5em;
   }
   
 
@@ -338,6 +339,7 @@ section:nth-of-type(2) section:nth-of-type(1) > label {
 section:nth-of-type(2) section:nth-of-type(3) {
   grid-area: modes;
   height: 30svh;
+  width: 90svw;
   border-radius: 1.5rem;
   border: .25px solid var(--color-border);
 
@@ -346,8 +348,6 @@ section:nth-of-type(2) section:nth-of-type(3) {
   
   margin: .75em 1em;
   padding: .75em;
-
-  transition: 2s;
 
   & div {
     display: flex;
@@ -399,6 +399,7 @@ section:nth-of-type(2) section:nth-of-type(4) {
   grid-area: sliders;
 
   height: 60svh;
+  width: 90svw;
   border-radius: 1.5rem;
 
   box-shadow: 10px 10px 10px 0 var(--color-bsdw-one),
@@ -408,12 +409,26 @@ section:nth-of-type(2) section:nth-of-type(4) {
   padding: 1em;
 
   & label {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(4em, 5em) clamp(5em, 30vw, 10em);
     gap: .5em;
     align-items: center;
     font-size: clamp(1.6em,5vw,2em);
 
-    color: var(--color-text-np);
+    color: var(--color-text);
+  }
+
+  /* hoe je de standaard vormgeving uitzet: https://codepen.io/davidpetrey/pen/ZEORRRj */
+  & input[type="range"] {
+    appearance: none;
+
+    border-radius: 5rem;
+    box-shadow: 2px 2px 2px 0 var(--color-bsdw-one),
+                -2px -2px 2px 0 var(--color-bsdw-two);
+
+    accent-color: var(--color-text-p);
+    border: .25px solid var(--color-border);
+    background: var(--color-bg);
   }
 }
 
@@ -499,6 +514,18 @@ html:has([value="pause"]:checked) {
       var(--color-cmd-yellow), 
       var(--color-cmd-lavendel) var(--mix-ratio)
     );
+  }
+
+  section:nth-of-type(2) section:nth-of-type(4) {
+    & h3:nth-of-type(1) {
+      display:none; 
+    }
+    
+    & label:nth-of-type(1),
+      & label:nth-of-type(2),
+      & label:nth-of-type(3) {
+      display:none;
+    }
   }
 }
 
@@ -590,7 +617,7 @@ html:has([value="pause"]:checked) {
 }
 
 
-@container style(--speed:0) and style(--rotate:0) {
+@container style(--speed:0) and style(--rotate:1) and style(--border-size:1) {
   section:nth-of-type(2) section:nth-of-type(2) div div {
     /*  Nils heeft me geholpen met het maken van de animatie.  */
     mask-image: conic-gradient(#000 var(--angle), #0000 0deg);
@@ -696,6 +723,12 @@ html:has([value="pause"]:checked) {
 
 /* MARK: BIG SCREEN
 /* -------- MEDIA QUERY --------  */
+@media screen and (min-width: 30em) {
+  section:nth-of-type(2) section:nth-of-type(1) {
+    flex-direction: row;
+  }
+}
+
 @media screen and (min-width: 48em) {
   h1 {
     grid-template-areas:
@@ -746,7 +779,8 @@ html:has([value="pause"]:checked) {
   /* MARK: MODES
   /* -------- SECTION: MODES --------  */
   section:nth-of-type(2) section:nth-of-type(3) {
-    height: 30svh;    
+    height: 30svh; 
+    width: clamp(25em, 27svw, 35em);  
   }
 
 
@@ -754,11 +788,11 @@ html:has([value="pause"]:checked) {
   /* -------- SECTION: SLIDERS --------  */
   section:nth-of-type(2) section:nth-of-type(4) {
     height: 55svh;
+    width: clamp(25em, 27svw, 35em);
 
     & label {
-      display: flex;
-      gap: .5em;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 5em clamp(3.5em, 15vw, 10em);
       font-size: clamp(1em,3vw,1.65em);
     }
   }
