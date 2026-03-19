@@ -255,7 +255,21 @@ Vanavond ga ik de 3d aanpassen en dat hij hopelijk hetzelfde werkt als in de cod
 ## REFLECTIE: WEEK 4
 
 Deze week hadden we maar 1 dag voor CSS. Ik wilde deze dag vooral ook focussen op alle kleine details goed krijgen, zodat het er echt uitziet als een goed werkend geheel met oog voor details. Hier heb ik dan ook best wat aandacht aan besteed. Gaande de dag voelde ik wel wat meer stress om de deadline te halen, maar gelukkig heb ik tot morgen 18:00. Ik wil morgen echter focussen op BT in plaats van CSS, dus wil proberen het woensdagavond af te hebben. 
-Ik had best wel een goed gevoel overgehouden aan afgelopen week. Mijn presentatie/feedback ging ook goed en kon mijn werk met trots laten zien. Ik ben vrij kritisch op mezelf, dus ik was nog niet helemaal tevreden bij het ingaan van de presentatie. Maar uiteindelijk was de feedback goed en heb ik ook tips gevraagd over wat een leuke easter egg zou kunnen zijn. Doordat ik vorige week goed had afgesloten, ging ik deze week met een lekker gevoel en met vertrouwen van start. Het uitwerken van details duurde wel wat langer dan gehoopt en het was een beetje balen dat de 3d versie niet hetzelfde werkte als op codepen, waar ik wel vanuit was gegaan. Dus dat was wel een beetje een tegenslag. Maar het is goed gekomen. 
+Ik had best wel een goed gevoel overgehouden aan afgelopen week. Mijn presentatie/feedback ging ook goed en kon mijn werk met trots laten zien. Ik ben vrij kritisch op mezelf, dus ik was nog niet helemaal tevreden bij het ingaan van de presentatie. Maar uiteindelijk was de feedback goed en heb ik ook tips gevraagd over wat een leuke easter egg zou kunnen zijn. Doordat ik vorige week goed had afgesloten, ging ik deze week met een lekker gevoel en met vertrouwen van start. Het uitwerken van details duurde wel wat langer dan gehoopt en het was een beetje balen dat de 3d versie niet hetzelfde werkte als op codepen, waar ik wel vanuit was gegaan. Dus dat was wel een beetje een tegenslag. Maar het is goed gekomen. Uiteindelijk lag het eraan dat ik niet de juiste selectors niet specifiek genoeg had beschreven voor een ander onderdeel, waardoor dat ook ging gelden voor het 3D gedeelte. Toen ik had gevonden waar het aan lag, was het gelukkig vrij snel op te lossen. 
+Ik ben blij dat ik uiteindelijk een easter egg heb kunnen toevoegen (rotate: 1, speed: 0 en border-size: 0) en ik zo toch nog een experiment heb kunnen toevoegen. Ook heb ik voldoende tijd gehad om de sliders meer in dezelfde stijl te maken en beter uit te lijnen. Vlak voordat ik het wilde inleveren, kwam ik erachter dat de responsiveness nog niet helemaal goed werkte, dus ook dit heb ik aangepast. Moest hier even een extra media query aan toevoegen voor de toggles. 
+Ik heb ook geoefend met if() in CSS en dit werkte ook, maar mijn CSS bleef wel rood. Daarom heb ik besloten het uiteindelijk op te lossen met een @container style, wat eigenlijk ook wel makkelijker is. 
+Dit was mijn code en ik ben wel benieuwd waarom hij in CSS rood bleef:
+
+section:nth-of-type(2) section:nth-of-type(2) div div {
+  animation: if(
+    style((--speed: 0) and (--rotate: 1)): --rotate-self 2s infinite alternate ease-in-out;
+
+    else: --rotate-self calc(var(--speed) * 1s) infinite alternate ease-in-out;
+  );
+
+}
+
+Hier is de nieuwe animatie nog niet in verwerkt, maar het if gedeelte werkte wel. Maar ik liep er wel tegenaan dat ik meerdere dingen moest aanpassen en dan was de @container style veel makkelijker om te gebruiken.
 
 
 ## ALGEMENE REFLECTIE
