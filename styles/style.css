@@ -194,6 +194,7 @@ main > section:nth-of-type(2) {
   "checkbox"
   "modes"
   "sliders";
+  grid-auto-rows: min-content;
 }
 
 
@@ -338,7 +339,7 @@ section:nth-of-type(2) section:nth-of-type(1) > label {
 /* -------- SECTION: MODES --------  */
 section:nth-of-type(2) section:nth-of-type(3) {
   grid-area: modes;
-  height: 30svh;
+  min-height: 30svh;
   width: 90svw;
   border-radius: 1.5rem;
   border: .25px solid var(--color-border);
@@ -367,6 +368,8 @@ section:nth-of-type(2) section:nth-of-type(3) {
     border-radius: 5rem;
     padding: 1.5em;
     margin-bottom: 1em;
+
+    position: relative;
     
     color: var(--color-text-np);
     
@@ -391,6 +394,15 @@ section:nth-of-type(2) section:nth-of-type(3) {
   & input[type="radio"] {
     display: none;
   }
+
+  & label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 }
 
 /* MARK: SLIDERS
@@ -398,7 +410,7 @@ section:nth-of-type(2) section:nth-of-type(3) {
 section:nth-of-type(2) section:nth-of-type(4) {
   grid-area: sliders;
 
-  height: 60svh;
+  min-height: 60svh;
   width: 90svw;
   border-radius: 1.5rem;
 
